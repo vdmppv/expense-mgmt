@@ -9,12 +9,12 @@ _Student: Vadzim Papou_
 ## [Design - screenshots from Affinity Designer](https://www.figma.com/file/x1i4ceJDfF2WMYDHwi0kSy/Expenser)
 
 ## Github Pages
-- [Register Page]()
-- [Login Page]()
-- [Profile Page]()
-- [Transactions Page]()
-- [Categories Page]()
-- [Transactions Pop-Up]()
-- [Categories Pop-Up]()
-- [Total Statistics Page]()
-- [Category Statistics Page]()
+- [Register Page](https://vdmppv.github.io/expense-mgmt/src/register.html)
+- [Login Page](https://vdmppv.github.io/expense-mgmt/src/login.html)
+- [Profile Page]() - still in progress
+- [Transactions Page](https://vdmppv.github.io/expense-mgmt/src/transactions.html) - 
+- [Categories Page](https://vdmppv.github.io/expense-mgmt/src/categories.html)
+- [Transactions Pop-Up]() - still in progress
+- [Categories Pop-Up]() - still in progress
+- [Total Statistics Page]() - still in progress
+- [Category Statistics Page](https://vdmppv.github.io/expense-mgmt/src/statistics_category.html)
