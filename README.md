@@ -12,7 +12,7 @@ _Student: Vadzim Papou_
 - [Register Page](https://vdmppv.github.io/expense-mgmt/src/register.html)
 - [Login Page](https://vdmppv.github.io/expense-mgmt/src/login.html)
 - [Profile Page]() - still in progress
-- [Transactions Page](https://vdmppv.github.io/expense-mgmt/src/transactions.html) - 
+- [Transactions Page](https://vdmppv.github.io/expense-mgmt/src/transactions.html)
 - [Categories Page](https://vdmppv.github.io/expense-mgmt/src/categories.html)
 - [Transactions Pop-Up]() - still in progress
 - [Categories Pop-Up]() - still in progress

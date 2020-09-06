@@ -196,6 +196,7 @@
   border-radius: 10px;
   max-width: 300px;
   justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .transaction-card-margin{
@@ -220,32 +221,32 @@
   justify-content: space-between;
   }
 
-.statictic-table{
+.statistics-table{
   display: flex;
   justify-content: center;
 }
 
-.statictic-transactions{
+.statistics-transactions{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.statictic-main{
+.statistics-main{
   display: flex;
   flex-direction: column;
   max-width: 1000px;
   width: 100%;
 }
 
-.statictic-inputs{
+.statistics-inputs{
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
-.statictic-input{
+.statistics-input{
   border: solid 2px var(--primary-color);
   border-radius: 5px;
   font-size: 25px;
@@ -255,12 +256,12 @@
   min-width: 150px;
 }
 
-.statictic-select{
+.statistics-select{
   min-width: 300px;
   flex: 2;
 }
 
-.statictic-button{
+.statistics-button{
   border: 0;
    margin: 0 10px;
   background: var(--primary-color);
@@ -350,22 +351,22 @@
     position: relative;
     padding-bottom: 10px;
   }
-  .statictic-transactions{
+  .statistics-transactions{
     justify-content: center;
   }
 
-  .statictic-inputs{
+  .statistics-inputs{
     justify-content: center;
   }
-  .statictic-input{
+  .statistics-input{
     font-size: 24px;
     padding: 5px 10px;
   }
-  .statictic-select{
+  .statistics-select{
     margin: 10px;
   }
 
-  .statictic-button{
+  .statistics-button{
     margin: 10px;
   }
 }
