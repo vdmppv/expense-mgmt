@@ -370,9 +370,9 @@
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  padding: 30px;
-  margin: 100px;
-  box-shadow: 0 0 20px var(--primary-color);
+  padding: 15px;
+  margin: 65px;
+  box-shadow: 0 0 15px var(--primary-color);
 } 
 
 .modal-wrap{
@@ -575,6 +575,9 @@
   }
   .modal-line{
     justify-content: center;
+  }
+  .modal-input{
+    font-size: 20px;
   }
 }
 
