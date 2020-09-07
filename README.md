@@ -11,10 +11,10 @@ _Student: Vadzim Papou_
 ## Github Pages
 - [Register Page](https://vdmppv.github.io/expense-mgmt/src/register.html)
 - [Login Page](https://vdmppv.github.io/expense-mgmt/src/login.html)
-- [Profile Page]() - still in progress
+- [Profile Page](https://vdmppv.github.io/expense-mgmt/src/profile.html)
 - [Transactions Page](https://vdmppv.github.io/expense-mgmt/src/transactions.html)
 - [Categories Page](https://vdmppv.github.io/expense-mgmt/src/categories.html)
-- [Transactions Pop-Up]() - still in progress
-- [Categories Pop-Up]() - still in progress
-- [Total Statistics Page]() - still in progress
+- [Transactions Pop-Up](https://vdmppv.github.io/expense-mgmt/src/addTransaction.html)
+- [Categories Pop-Up](https://vdmppv.github.io/expense-mgmt/src/addCategory.html)
+- [Total Statistics Page](https://vdmppv.github.io/expense-mgmt/src/statistics_total)
 - [Category Statistics Page](https://vdmppv.github.io/expense-mgmt/src/statistics_category.html)
