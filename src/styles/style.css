@@ -87,6 +87,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin: 40px;
 }
 
 .table-main{
@@ -94,6 +95,7 @@
   flex-wrap: wrap;
   max-width: 1500px;
   justify-content: center;
+  margin: 20px;
 }
 
 .category-block{
@@ -159,8 +161,7 @@
 }
 
 .total-card{
-  border-radius: 10px;
-  max-width: 340px;
+  border-radius: 10px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,7 +236,7 @@
 .statistics-main{
   display: flex;
   flex-direction: column;
-  max-width: 1000px;
+  max-width: 1100px;
   width: 100%;
 }
 
@@ -330,6 +331,171 @@
   
 }
 
+.legend{
+  display: flex;
+  flex-direction: column;
+  max-width: 170px;
+}
+
+.diagram-legend{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legend-title{
+  margin: 0px auto 5px auto;
+  padding: 5px 20px;
+  background: #EAEAEA;
+  border-radius: 40px;
+}
+
+.legend-item{
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 40px;
+}
+
+
+.diagram{
+  display: flex;
+  justify-content: center;
+}
+
+.diagram-main{
+  max-width: 300px;
+}
+
+.modal{
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 30px;
+  margin: 100px;
+  box-shadow: 0 0 20px var(--primary-color);
+} 
+
+.modal-wrap{
+  display: flex;
+  justify-content: center;
+}
+
+.modal-title{
+  color: var(--primary-color);
+}
+
+.modal-input{
+  border: solid 2px var(--primary-color);
+  border-radius: 5px;
+  font-size: 25px;
+  padding: 0px 20px;
+  margin: 10px;
+}
+
+.modal-radio{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.modal-line{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap
+}
+
+.modal-footer{
+  display: flex;
+  justify-content: center;
+}
+
+.modal-main{
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-button{
+  border: 0;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  padding: 10px 40px;
+  margin: 10px
+}
+
+.radio-btn {
+  text-align: center;    
+}
+
+.radio-btn-red{
+  background: var(--red-color);
+}
+
+.radio-btn-green{
+  background: var(--green-color);
+}
+
+.radio-btn-input {
+  display: none;
+}
+
+.radio-btn-input + label {
+  padding: 5px 30px;
+}
+
+.radio-btn-input:checked + label {
+  opacity: 0.3;
+  color: white;  
+}
+
+.radio-btn-text {
+  padding: 0 10px;
+}
+
+.choose-file{
+  margin: 12px;
+}
+
+.choose-color{
+  width: 95%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  margin: 10px;
+  height: 30px;
+}
+
+.choose-file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.choose-file-label {
+  border: solid 2px var(--primary-color);
+  border-radius: 5px;
+  font-size: 25px;
+  padding: 0px 20px;
+  margin: 10px;
+  color: #555;   
+  margin: auto;
+  display: block;
+  
+}
+
+.choose-file__label:focus {
+  color: #888;
+  border-color: #888;
+}
+
+.choose-file__label:hover {
+  color: #888;
+  border-color: #888;
+}
+
 @media screen and (max-width: 900px) {
   .sign-in-img{
     background: url(../img/HappyMan.svg) center no-repeat;
@@ -368,6 +534,9 @@
 
   .statistics-button{
     margin: 10px;
+  }
+  .modal-line{
+    justify-content: center;
   }
 }
 
