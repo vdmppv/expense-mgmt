@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">    
+    <link href="./styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <title>Transactions</title>
+</head>
+<body>
+<header>
+    <div class="logo-block">
+        <img src="img/Logo.png" class="user-img">
+    </div>
+    
+    <nav class="navigation-menu-block">
+        <ul class="navigation-menu">
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">Statistics</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">Transactions</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">Categories</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="user-block">
+        <img src="img/ProfileIcon.svg" class="user-img">
+    </div>
+</header>
+
+<main>    
+    <div class="modal-wrap">
+        <form class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">New transaction</h2>
+            </div>
+
+            <div class="modal-main">
+                <input class="modal-input" type="number" placeholder="Amount">
+                <div class="modal-radio">
+                    <div class="radio-btn">
+                        <input type="radio" name="income-expense" id="choice1" value="income" class="radio-btn-input">
+                        <label for="choice1" class="radio-btn-text radio-btn-green">Income</label>
+                    </div>
+
+                    <div class="radio-btn">
+                        <input type="radio" name="income-expense" id="choice2" value="expense" class="radio-btn-input">
+                        <label for="choice2" class="radio-btn-text radio-btn-red">Expense</label>
+                    </div>
+                </div>
+                <input class="modal-input" type="text" placeholder="Place">
+                <input class="modal-input" type="text" placeholder="Category">
+                <div class="modal-line">
+                    <div class="choose-file">
+                        <input type="file" accept="image/*" name="file" id="file" class="choose-file-input">
+                        <label for="file" class="choose-file-label">
+                            <i class="far fa-file-image"></i>
+                            <span class="js-fileName">Choose Image</span>
+                        </label>
+                    </div>
+                
+                <input class="modal-input" type="date">
+            </div>
+                
+            </div>
+
+            <div class="modal-footer">
+                <button class="modal-button">Add Transaction</button>
+            </div>
+        </form> 
+    </div>   
+</main>
+</footer>
+</body>
+</html>
