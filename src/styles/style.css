@@ -22,6 +22,7 @@
 
 .user-block{
   margin-right: 20px;
+  z-index: 2;
 }
 
 .page-title{
@@ -99,6 +100,7 @@
 }
 
 .category-block{
+  min-width: 140px;
   max-width: 350px;
   margin: 20px;
   padding: 20px;
@@ -417,6 +419,15 @@
 .modal-button{
   border: 0;
   background: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  padding: 10px 40px;
+  margin: 10px
+}
+
+.modal-button-red{
+  background: var(--red-color);
+  border: 0;
   color: var(--white-color);
   border-radius: 5px;
   padding: 10px 40px;
