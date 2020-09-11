@@ -131,6 +131,11 @@
   justify-content: center;
 }
 
+.category-block-main{
+  display: flex;
+  justify-content: center;
+}
+
 .add-button{
   border: 0;
   background: var(--primary-color);
@@ -170,6 +175,7 @@
   flex-direction: column;
   box-shadow: 0 0 20px var(--primary-color);
   padding: 40px 0;
+  min-width: 260px;
 }
 
 .total-card-text{

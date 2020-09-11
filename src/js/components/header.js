@@ -48,11 +48,10 @@ let header = {
             `
         }
         let view =  /*html*/`
-                <div class="logo-block">
-                    <img class="user-img" src="/img/Logo.png"/>
-                </div>
-
-                ${headerView}
+            <div class="logo-block">
+                <img class="user-img" src="/img/Logo.png"/>
+            </div>
+            ${headerView}
         `
         return view;
     },
@@ -64,28 +63,26 @@ let header = {
 
             const categoriesButton = document.getElementById("header-categories");
             categoriesButton.onclick = linkNavigationHelper;
+
             const statisticsButton = document.getElementById("header-statistics");
             statisticsButton.onclick = linkNavigationHelper;
-
             
+            const usernameButton = document.getElementById("header-username");
+            usernameButton.onclick = linkNavigationHelper;
+
             const logoutButton = document.getElementById("header-logout");
             logoutButton.onclick = (event) => {
                 firebase.auth().signOut();
                 linkNavigationHelper(event);
+                Router._instance.navigate("/");
             };
-
-            const usernameButton = document.getElementById("header-username");
-            usernameButton.onclick = linkNavigationHelper;
-
         } else {
             const loginButton = document.getElementById("header-login");
-            const registerButton = document.getElementById("header-signup");
-
             loginButton.onclick = linkNavigationHelper;
 
+            const registerButton = document.getElementById("header-signup");
             registerButton.onclick = linkNavigationHelper;
         }
-
     }
 }
 export default header;
