@@ -368,6 +368,7 @@
 .diagram{
   display: flex;
   justify-content: center;
+  height: 300px;
 }
 
 .diagram-main{
@@ -375,12 +376,16 @@
 }
 
 .modal{
-  display: flex;
   flex-direction: column;
-  max-width: 600px;
   padding: 15px;
-  margin: 65px;
+  margin: 100px;
   box-shadow: 0 0 15px var(--primary-color);
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  top: 0;
+  background-color: var(--white-color);
 } 
 
 .modal-wrap{

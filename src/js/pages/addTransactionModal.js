@@ -8,45 +8,44 @@ let AddTransactionModal = {
         let user = firebase.auth().currentUser;
         let categories = await firebaseService.getCategoriesList(user);
         let view = `
-            <div class="modal-wrap">
-                <form class="modal">
-                    <div class="modal-header">
-                        <h3 class="modal-title">Add Transaction</h3>
-                    </div>
-                    <div class="modal-main">
-                        <input class="modal-input" type="number" id="transaction-amount" placeholder="Amount">
-                        <div class="modal-radio">
-                            <div class="radio-btn">
-                                <input type="radio" name="income-expense" id="choice1" value="income" class="radio-btn-input">
-                                <label for="choice1" class="radio-btn-text radio-btn-green">Income</label>
-                            </div>
-                            <div class="radio-btn">
-                                <input type="radio" name="income-expense" id="choice2" value="expense" class="radio-btn-input">
-                                <label for="choice2" class="radio-btn-text radio-btn-red">Expense</label>
-                            </div>
+            <form class="modal">
+                <div class="modal-header">
+                    <h2 class="modal-title">New Transaction</h2>
+                </div>
+                
+                <div class="modal-main">
+                    <input class="modal-input" type="number" id="transaction-amount" placeholder="Amount">
+                    <div class="modal-radio">
+                        <div class="radio-btn">
+                            <input type="radio" name="income-expense" id="choice1" value="income" class="radio-btn-input">
+                            <label for="choice1" class="radio-btn-text radio-btn-green">Income</label>
                         </div>
-                        <input class="modal-input" type="text" maxlength="50" id="transaction-place" placeholder="Place">
-                        <input class="modal-input" type="text" maxlength="256" id="transaction-description" placeholder="Description">
-                        ${await selectCategoryComponent("modal-input", categories).render()}
-                        <div class="modal-line">
-                            <div class="choose-file">
-                                <input type="file" accept="image/*" name="file" id="file" class="choose-file-input">
-                                <label for="file" class="choose-file-label">
-                                    <i class="far fa-file-image"></i>
-                                    <span class="js-filename">Choose Image</span>
-                                </label>
-                            </div>
-
-                            <input required id="transaction-date-picker" class="modal-input" type="date">
+                        <div class="radio-btn">
+                            <input type="radio" name="income-expense" id="choice2" value="expense" class="radio-btn-input">
+                            <label for="choice2" class="radio-btn-text radio-btn-red">Expense</label>
                         </div>
                     </div>
+                    <input class="modal-input" type="text" maxlength="50" id="transaction-place" placeholder="Place">
+                    <input class="modal-input" type="text" maxlength="256" id="transaction-description" placeholder="Description">
+                    ${await selectCategoryComponent("modal-input", categories).render()}
+                    <div class="modal-line">
+                        <div class="choose-file">
+                            <input type="file" accept="image/*" name="file" id="file" class="choose-file-input">
+                            <label for="file" class="choose-file-label">
+                                <i class="far fa-file-image"></i>
+                                <span class="js-filename">Choose Image</span>
+                            </label>
+                        </div>
 
-                    <div class="modal-footer">
-                        <button class="modal-button">Add Transaction</button>
-                        <button id="transaction-close-button" class="modal-button-red">Close</button> 
+                        <input required id="transaction-date-picker" class="modal-input" type="date">
                     </div>
-                </form>
-            </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="modal-button">Add Transaction</button>
+                    <button id="transaction-close-button" class="modal-button-red">Close</button> 
+                </div>
+            </form>
         `;
 
         return view;

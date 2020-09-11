@@ -2,7 +2,7 @@ export const modal = (content) => ({
 
         render: async () => {
             let view =  `
-                <div id="modal-content" class="modal">${await content.render()}</div>
+                <div id="modal-content" class="modal-wrap">${await content.render()}</div>
             `
             return view;
         },
