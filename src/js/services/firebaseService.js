@@ -77,6 +77,53 @@ class FirebaseService {
     async removeCategory({uid}, categoryId) {
         await this.categoryRef(uid).child(categoryId).remove();
     }
+    
+    transactionRef(uid) {
+        return firebase.database().ref(`/transaction${uid}`);
+    }
+
+    async writeTransaction({uid}, transaction) {
+        const transactionNode = await this.transactionRef(uid).push();
+        await transactionNode.set(
+            {
+                amount: transaction.amount,
+                place: transaction.place,
+                description: transaction.description,
+                category_id: transaction.category_id,
+                date: transaction.date,
+                type: transaction.type,
+                uid: transactionNode.key,
+                image: null
+            }
+        );
+        if (transaction.image) {
+            this.uploadImage(uid, transaction.image,  async (imageId) => {
+                await transactionNode.update(
+                    {
+                        image: imageId,
+                    }
+                );
+            });
+        }
+    }
+
+    getTransactions({uid}, callback) {
+        this.getData(callback, this.transactionRef(uid));
+    }
+
+    async getTransactionsFromCategory({uid}, categoryId) {
+        const snapshot = await this.transactionRef(uid).orderByChild("category_id").equalTo(categoryId).once("value");
+        return Object.values(snapshot.val() ?? []);
+    }
+
+    async getTransactionsFromDate({uid}, fromDate) {
+        const snapshot = await this.transactionRef(uid).orderByChild("date").startAt(fromDate).once("value");
+        return Object.values(snapshot.val() ?? []);
+    }
+
+    async removeTransaction({uid}, transactionId) {
+        await this.transactionRef(uid).child(transactionId).remove();
+    }
 
     uploadImage(uid, image, callback) {
         const imageId = new Date().getTime();
