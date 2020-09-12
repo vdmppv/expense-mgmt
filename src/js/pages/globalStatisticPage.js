@@ -54,8 +54,8 @@ let GlobalStatisticPage = {
             chartContainer.innerHTML = chartComponent(stat);
             const incomeChartCanvas = document.getElementById("income-chart");
             const expenseChartCanvas = document.getElementById("expense-chart");
-            createPieChart(incomeChartCanvas, createDataForChart(stat["incomeTransactionsInfo"], categories));
-            createPieChart(expenseChartCanvas, createDataForChart(stat["expenseTransactionsInfo"], categories));
+            createPieChart(incomeChartCanvas, createDataForChart(stat["incomeTransactions"], categories));
+            createPieChart(expenseChartCanvas, createDataForChart(stat["expenseTransactions"], categories));
         });
 
     }
