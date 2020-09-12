@@ -386,6 +386,8 @@
   padding-top: 20px;
   top: 0;
   background-color: var(--white-color);
+  animation-name: animatetop;
+  animation-duration: 0.4s
 } 
 
 .modal-wrap{
@@ -425,6 +427,11 @@
 .modal-main{
   display: flex;
   flex-direction: column;
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
 
 .modal-button{
