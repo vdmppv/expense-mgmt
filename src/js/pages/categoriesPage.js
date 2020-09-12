@@ -43,6 +43,15 @@ let CategoriesPage = {
         addCategoriesButton.addEventListener("click", () => {
             showModal(AddCategoryModal);
         });
+        tableMain.addEventListener("click", async (event) => {
+            if (event.target.className.includes("category-block-button")) {
+                const categoryUid = event.target.getAttribute("data-href");
+                await firebaseService.removeCategory(user, categoryUid);
+            } else if (event.target.className.includes("fas fa-times")) {
+                const categoryUid = event.target.parentNode.getAttribute("data-href");
+                await firebaseService.removeCategory(user, categoryUid);
+            }
+        });
     }
 }
 

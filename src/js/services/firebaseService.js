@@ -74,8 +74,14 @@ class FirebaseService {
         return snapshot.val();
     }
 
-    async removeCategory({uid}, categoryId) {
-        await this.categoryRef(uid).child(categoryId).remove();
+    async removeCategory(user, categoryId) {
+        const transactions = await this.getTransactionsFromCategory(user, categoryId);
+        for (const index in transactions){
+            debugger;
+            this.removeTransaction(user.uid, transactions[index]);
+        }
+        console.log(transactions);
+        await this.categoryRef(user.uid).child(categoryId).remove();
     }
     
     transactionRef(uid) {
@@ -121,8 +127,8 @@ class FirebaseService {
         return Object.values(snapshot.val() ?? []);
     }
 
-    async removeTransaction({uid}, transactionId) {
-        await this.transactionRef(uid).child(transactionId).remove();
+    async removeTransaction(userid, {uid}) {
+        await this.transactionRef(userid).child(uid).remove();
     }
 
     uploadImage(uid, image, callback) {
