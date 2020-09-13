@@ -18,3 +18,6 @@ _Student: Vadzim Papou_
 - [Categories Pop-Up](https://vdmppv.github.io/expense-mgmt/src/addCategory.html)
 - [Total Statistics Page](https://vdmppv.github.io/expense-mgmt/src/statistics_total)
 - [Category Statistics Page](https://vdmppv.github.io/expense-mgmt/src/statistics_category.html)
+
+# Firebase Hosting:  
+https://expenser-ab08b.web.app/
