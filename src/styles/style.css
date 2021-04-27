@@ -288,18 +288,18 @@
   width: 900px;
   position: absolute;  
   right: 0;
-  top: 0;
+  top: 85px;
   z-index: -1;
 }
 
 .sign-up-img{
   background: url(../img/RegisterPicture.png) center no-repeat; 
   background-size: cover;
-  height: 500px;
+  height: 520px;
   width: 900px;
   position: absolute;
   right: 0px;
-  top: 0;
+  top: 95px;
   z-index: -1;
 }
 
@@ -311,6 +311,7 @@
 .sign-in-text{
   font-size: 24px;
   margin-bottom: 20px;
+  font-family: 'TT Commons', sans-serif;
 }
 
 .sign-in-input{
@@ -320,6 +321,7 @@
   padding: 5px 20px;
   margin: 15px 0;
   flex: 1;
+  font-family: 'TT Commons', sans-serif;
 }
 
 .sign-in-button{
@@ -337,7 +339,6 @@
   max-width: 500px;
   padding: 20px;
   margin: 20px;
-  
 }
 
 .legend{
@@ -621,11 +622,14 @@ header{
 }
 
 *{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main{
+  position: relative;
 }
 
 ul {
-
     margin: 0;
     padding-left: 0;
 }
@@ -640,11 +644,29 @@ html {
 body {
     margin: 0;
     background: var(--white-color);
-    min-height: 100%;    
+    min-height: 100%;   
 }
 
 a{
     cursor: pointer;
     text-decoration: none;
     color: black;
+}
+
+.start-img { 
+  background: url(../img/Money.png) center no-repeat;
+  position: fixed;
+  top: 50px;
+  height: 1000px;
+  width: 1500px;
+  opacity: 0.83;
+}
+
+.welcome-text {
+  position: initial;
+  color: #374cb6;  
+  font-size: 9rem;
+  line-height: 0.9;
+  vertical-align: top;
+  text-align: center;
 }

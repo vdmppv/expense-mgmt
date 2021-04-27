@@ -1,9 +1,8 @@
 let HomePage = {
     render: async () => {
         let view =  /*html*/`
-            <section>
-                <h2> Welcome to Expenser </h2>
-            </section>
+        <div class="start-img"></div>
+        <h2 class="welcome-text">Welcome to Expenser</h2>
         `
         return view;
     },
