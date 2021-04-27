@@ -39,5 +39,13 @@ export const routes = [
     {
         path: "/statistics/global",
         page: StatisticsGlobalPage
+    },
+    {
+        path: "/notes",
+        page: ProfilePage
+    },
+    {
+        path: "/feed",
+        page: ProfilePage
     }
 ];

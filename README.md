@@ -21,3 +21,9 @@ _Student: Vadzim Papou_
 
 # Firebase Hosting:  
 https://expenser-ab08b.web.app/
+
+# To-Do List:
+- redesign starting welcoming page 
+- add functionality of: notes/reminders, rss-feed
+- place background pics on most of the pages
+
