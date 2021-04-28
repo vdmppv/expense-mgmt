@@ -84,6 +84,7 @@
 }
 
 .table{
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -660,6 +661,34 @@ a{
   height: 1000px;
   width: 1500px;
   opacity: 0.83;
+}
+
+.start-img-tr { 
+  background: url(../img/HappyMan.png) right no-repeat;
+  position: fixed;
+  top: 50px;
+  height: 1000px;
+  width: 1500px;
+  opacity: 0.7;
+}
+
+.start-img-prf { 
+  background: url(../img/UserCloud.png) right no-repeat;
+  position: fixed;
+  top: 50px;
+  height: 1000px;
+  width: 1800px;
+  opacity: 0.9;
+}
+
+.start-img-ctg { 
+  background: url(../img/WomenOnCoins.png) right no-repeat;
+  position: fixed;
+  top: 50px;
+  height: 1050px;
+  width: 1450px;
+  opacity: 0.54;
+  background-size: 25%;
 }
 
 .welcome-text {

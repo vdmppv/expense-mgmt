@@ -7,6 +7,7 @@ import TransactionComponent from "../components/transactionComponent.js";
 let TransactionsPage = {
     render: async () => {
         let view = `
+            <div class="start-img-tr"></div>
             <div>
                 <h1 class="page-title">Transactions</h1>
             </div>

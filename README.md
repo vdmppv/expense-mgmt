@@ -23,7 +23,6 @@ _Student: Vadzim Papou_
 https://expenser-ab08b.web.app/
 
 # To-Do List:
-- redesign starting welcoming page 
-- add functionality of: notes/reminders, rss-feed
-- place background pics on most of the pages
+- implement functionality of: notes/reminders, rss-feed
+- add editTransaction, editCategory
 

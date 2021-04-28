@@ -18,7 +18,7 @@ export const categoryComponent = (category) => {
                 </li>
             `;
 
-            return view; // need to fix
+            return view;
         },
         after_render: async () => {
         }

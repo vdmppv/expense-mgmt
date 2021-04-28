@@ -7,6 +7,7 @@ let ProfilePage = {
         user = firebase.auth().currentUser;
         const userInfo = await firebaseService.readUserData(user);
         let view =  /*html*/`
+            <div class="start-img-prf"></div>
             <div class="profile-wrap">
                 <div class="profile-card">
                     <div class="profile-img"><img height="170px" src="img/ProfileDefault.png"></div>

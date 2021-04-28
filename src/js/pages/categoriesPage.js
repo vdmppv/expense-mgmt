@@ -6,6 +6,7 @@ import {showModal} from "../services/modalService.js";
 let CategoriesPage = {
     render: async () => {
         let view = `
+            <div class="start-img-ctg"></div>
             <div>
                 <h1 class="page-title">Categories</h1>
             </div>
