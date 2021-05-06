@@ -1,8 +1,10 @@
 import {Router} from "../router.js";
 import {linkNavigationHelper} from "../helpers/linkNavigationHelper.js";
+import {getRate} from "../helpers/getRates.js";
 
 let header = {
     render: async () => {
+
         let user = firebase.auth().currentUser;
         let username = localStorage.getItem("username");
         let headerView;
@@ -56,12 +58,17 @@ let header = {
         let view =  /*html*/`
             <div class="logo-block">
                 <img class="user-img" src="/img/Logo.png"/>
+                <div class="rate-block">
+                <p class="navigation-link">$:<span id='usd'></span>
+                                    €:<span id='eur'></span></p>
+                </div>
             </div>
             ${headerView}
         `
         return view;
     },
     after_render: async () => {
+        getRate();
         let user = firebase.auth().currentUser;
         if (user) {
             const transactionButton = document.getElementById("header-transactions");

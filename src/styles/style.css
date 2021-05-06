@@ -13,11 +13,17 @@
 
 .user-img{
   height: 40px;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .logo-block{
   margin-left: 25px;
+}
+
+.rate-block{
+  margin-left: 60px;
+  display: inline-grid;
+  vertical-align: top;
 }
 
 .user-block{
