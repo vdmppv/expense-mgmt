@@ -1,7 +1,8 @@
-export class note{
-    constructor({title, description, timeCreated, timeAlarm}){
+export class Note {
+    constructor({title, description, color, timeCreated, timeAlarm}){
         this.title = title;
         this.description = description;
+        this.color = color;
         this.timeCreated = timeCreated;
         this.timeAlarm = timeAlarm;
     }

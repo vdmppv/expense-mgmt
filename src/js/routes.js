@@ -6,6 +6,7 @@ import CategoriesPage from "./pages/categoriesPage.js";
 import TransactionsPage from "./pages/transactionsPage.js";
 import StatisticsCategoryPage from "./pages/categoryStatisticPage.js";
 import StatisticsGlobalPage from "./pages/globalStatisticPage.js"; 
+import NotesPage from "./pages/notesPage.js";
 
 export const routes = [
     {
@@ -42,7 +43,7 @@ export const routes = [
     },
     {
         path: "/notes",
-        page: ProfilePage
+        page: NotesPage
     },
     {
         path: "/feed",

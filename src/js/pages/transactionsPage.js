@@ -45,6 +45,16 @@ let TransactionsPage = {
         addTransactionsButton.addEventListener("click", () => {
             showModal(AddTransactionModal);
         });
+
+        tableMain.addEventListener("click", async (event) => {
+            if (event.target.className.includes("category-block-button")) {
+                const transactionUid = event.target.getAttribute("data-href");
+                await firebaseService.removeTransaction(user, transactionUid);
+            } else if (event.target.className.includes("fas fa-times")) {
+                const transactionUid = event.target.parentNode.getAttribute("data-href");
+                await firebaseService.removeTransaction(user, transactionUid);
+            }
+        });
     }
 }
 

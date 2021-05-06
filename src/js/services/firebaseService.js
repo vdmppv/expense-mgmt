@@ -146,6 +146,32 @@ class FirebaseService {
     async retrieveImage(imageId) {
         return await firebase.storage().ref(`/images/${imageId}`).getDownloadURL();
     }
+
+    noteRef(uid) {
+        return firebase.database().ref(`/note${uid}`);
+    }
+
+    async writeNote({uid}, note) {
+        const noteNode = await this.noteRef(uid).push();
+        await noteNode.set(
+            {
+                title: note.title,
+                description: note.description,
+                color: note.color,
+                timeCreated: note.timeCreated,
+                timeAlarm: note.timeAlarm,
+                uid: noteNode.key
+            }
+        );
+    }
+
+    async getNotes({uid}, callback){
+        this.getData(callback, this.noteRef(uid));
+    }
+
+    async removeNote(userid, noteid) {
+        await this.noteRef(userid.uid).child(noteid).remove();
+    }
 }
 
 export default FirebaseService;
