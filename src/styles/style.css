@@ -144,6 +144,56 @@
   justify-content: center;
 }
 
+.note-block{
+  min-width: 140px;
+  max-width: 350px;
+  margin: 30px;
+  padding: 40px;
+  position: relative;
+  color: var(--white-color);
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+.note-block-button{
+  border: 0;
+  background: transparent;
+  color: var(--white-color);
+}
+
+.note-block-buttons{
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+  top: 5px;
+}
+
+.note-block-buttons:hover{
+  opacity: 1;
+}
+
+.note-block-head{
+  display: flex;
+  justify-content: center;
+}
+
+.note-block-main{
+  display: flex;
+  justify-content: center;
+}
+
+.note-block-bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-style: outset;
+  margin-top: 30px;
+}
+
+.note-block-text{
+  margin-top: 10px;
+}
+
 .add-button{
   border: 0;
   background: var(--primary-color);

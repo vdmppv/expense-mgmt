@@ -79,7 +79,6 @@ class FirebaseService {
         for (const index in transactions){
             this.removeTransaction(user.uid, transactions[index]);
         }
-        console.log(transactions);
         await this.categoryRef(user.uid).child(categoryId).remove();
     }
     

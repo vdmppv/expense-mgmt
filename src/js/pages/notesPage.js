@@ -27,6 +27,7 @@ let NotesPage = {
         const user = firebase.auth().currentUser;
 
         firebaseService.getNotes(user, async (data) => {
+            var currentTime = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             let innerView = ``;
             if (!data.length) {
                 tableMain.innerHTML = innerView;
@@ -35,6 +36,12 @@ let NotesPage = {
             for (const note of data) {
                 const noteComponent = NoteComponent(note);
                 innerView += await noteComponent.render();
+                
+                //const timeAlarm = note["timeAlarm"];
+                //if (currentTime === timeAlarm) {
+                //    console.log("sound play");
+                //}
+
                 await noteComponent.after_render();
             }
             tableMain.innerHTML = innerView;
@@ -45,7 +52,7 @@ let NotesPage = {
             showModal(AddNoteModal);
         });
         tableMain.addEventListener("click", async (event) => {
-            if (event.target.className.includes("category-block-button")) {
+            if (event.target.className.includes("note-block-button")) {
                 const noteUid = event.target.getAttribute("data-href");
                 await firebaseService.removeNote(user, noteUid);
             } else if (event.target.className.includes("fas fa-times")) {

@@ -14,6 +14,7 @@ let AddNoteModal = {
                     <input required id="category-title" maxlength="50" class="modal-input" type="text" placeholder="Title">
                     <input required id="category-description" maxlength="256" class="modal-input" type="text" placeholder="Description">
                     <input required id="category-color" class="choose-color" type="color" value="#38a9ff"> 
+                    <input required id="note-timer" class="modal-input" type="time">
                 </div>
     
                 <div class="modal-footer">
@@ -30,7 +31,9 @@ let AddNoteModal = {
         const noteTitle = document.getElementById("category-title");
         const noteDescripton = document.getElementById("category-description");
         const noteColor = document.getElementById("category-color");
+        const noteTimer = document.getElementById("note-timer");
         const form = document.querySelector(".modal");
+        const dateTime = new Date();
         form.addEventListener("submit", async (event) => {
             event.preventDefault();
             const note = new Note(
@@ -38,8 +41,8 @@ let AddNoteModal = {
                     title: noteTitle.value,
                     description: noteDescripton.value,
                     color: noteColor.value,
-                    timeCreated: null,
-                    timeAlarm: null
+                    timeCreated: dateTime.toLocaleString(),
+                    timeAlarm: noteTimer.value
                 }
             );
             await firebaseService.writeNote(user, note);
