@@ -23,6 +23,6 @@ _Student: Vadzim Papou_
 https://expenser-ab08b.web.app/
 
 # To-Do List:
-- implement functionality of: notes/reminders, rss-feed
+- implement rss-reader, timer and richtext on notifications 
 - add editTransaction, editCategory
 
