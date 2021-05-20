@@ -261,7 +261,7 @@
   margin: 20px 0;
   padding: 20px;
   border-radius: 10px;
-  max-width: 300px;
+  max-width: 400px;
   justify-content: space-between;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
@@ -287,6 +287,22 @@
   flex-direction: column;
   justify-content: space-between;
   }
+
+.transaction-block-button{
+  border: 0;
+  background: transparent;
+  color: var(--white-color);
+}
+
+.transaction-block-buttons{
+  position: relative;
+  opacity: 0;
+  text-align: right;
+}
+
+.transaction-block-buttons:hover{
+  opacity: 1;
+}
 
 .statistics-table{
   display: flex;

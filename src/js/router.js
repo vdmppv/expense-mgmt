@@ -43,7 +43,6 @@ export class Router {
         await Header.after_render();
 
         let currentPage = NotFoundPage;
-        console.log(url);
         for (const {path, page} of Router._instance.routes) {
             if (path === url) {
                 currentPage = page;

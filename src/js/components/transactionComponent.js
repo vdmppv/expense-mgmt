@@ -17,8 +17,12 @@ export const transactionComponent = (transaction) => {
                             <span class="transaction-item">Date:  ${transaction["date"]}</span>
                         </div>
                         <div class="transaction-right">
-                            <span class="transaction-amount">${checkIncome ? "+" : "-"}${transaction["amount"]}</span>
+                            <div class="transaction-block-buttons">
+                                <button class="transaction-block-button"><i class="fas fa-cog"></i></button>
+                                <button class="transaction-block-button" id="transaction-component-delete" data-href="${transaction["uid"]}"><i class="fas fa-times"></i></button>    
+                            </div>
                             <img class="transaction-img" src="${imageLink}" height="75px">
+                            <span class="transaction-amount">${checkIncome ? "+" : "-"}${transaction["amount"]}</span>
                         </div>
                     </div>
                 </li>

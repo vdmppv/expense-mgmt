@@ -125,8 +125,8 @@ class FirebaseService {
         return Object.values(snapshot.val() ?? []);
     }
 
-    async removeTransaction(userid, {uid}) {
-        await this.transactionRef(userid).child(uid).remove();
+    async removeTransaction(userid, transactionid) {
+        await this.transactionRef(userid.uid).child(transactionid).remove();
     }
 
     uploadImage(uid, image, callback) {

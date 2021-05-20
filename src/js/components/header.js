@@ -24,9 +24,6 @@ let header = {
                         <li class="navigation-item">
                             <a class="navigation-link" href="/notes" id="header-notes">Daily Reminders</a>
                         </li>
-                        <li class="navigation-item">
-                            <a class="navigation-link" href="/feed" id="header-feed">Feed</a>
-                        </li>
                     </ul>
                 </nav>
                  
@@ -85,9 +82,6 @@ let header = {
 
             const notesButton = document.getElementById("header-notes");
             notesButton.onclick = linkNavigationHelper;
-
-            const feedButton = document.getElementById("header-feed");
-            feedButton.onclick = linkNavigationHelper;
 
             const logoutButton = document.getElementById("header-logout");
             logoutButton.onclick = (event) => {

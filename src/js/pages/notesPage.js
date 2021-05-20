@@ -3,8 +3,28 @@ import {firebaseService} from "../services/index.js";
 import AddNoteModal from "../pages/addNoteModal.js";
 import {showModal} from "../services/modalService.js";
 
+function notifyMe() {
+    if (!("Notification" in window)) {
+      alert("This browser does not support desktop notification");
+    }
+  
+    else if (Notification.permission === "granted") {
+      var notification = new Notification("Hi there!");
+    }
+  
+    else if (Notification.permission !== 'denied') {
+      Notification.requestPermission(function (permission) {
+        if (permission === "granted") {
+          var notification = new Notification("Hi there!");
+        }
+      });
+    }
+  }
+
+
 let NotesPage = {
     render: async () => {
+        var currentTime = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
         let view = `
             <div class="start-img-ctg"></div>
             <div>
@@ -22,12 +42,10 @@ let NotesPage = {
         return view;
     },
     after_render: async () => {
-
         const tableMain = document.querySelector(".table-main");
         const user = firebase.auth().currentUser;
 
         firebaseService.getNotes(user, async (data) => {
-            var currentTime = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             let innerView = ``;
             if (!data.length) {
                 tableMain.innerHTML = innerView;
@@ -36,12 +54,6 @@ let NotesPage = {
             for (const note of data) {
                 const noteComponent = NoteComponent(note);
                 innerView += await noteComponent.render();
-                
-                //const timeAlarm = note["timeAlarm"];
-                //if (currentTime === timeAlarm) {
-                //    console.log("sound play");
-                //}
-
                 await noteComponent.after_render();
             }
             tableMain.innerHTML = innerView;
@@ -51,6 +63,13 @@ let NotesPage = {
         addNotesButton.addEventListener("click", () => {
             showModal(AddNoteModal);
         });
+
+        //compare timeAlert field of all notes to current time 
+        const addNotificationButton = document.getElementById("reminder-button");
+        addNotificationButton.addEventListener("click", () => {
+            notifyMe();
+        });
+        
         tableMain.addEventListener("click", async (event) => {
             if (event.target.className.includes("note-block-button")) {
                 const noteUid = event.target.getAttribute("data-href");
